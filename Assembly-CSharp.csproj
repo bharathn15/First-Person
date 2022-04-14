@@ -55,6 +55,8 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\FirstPerson\MouseLook.cs" />
     <Compile Include="Assets\Scripts\FirstPerson\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\FirstPerson\Command.cs" />
+    <Compile Include="Assets\Scripts\FirstPerson\Action.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Poly City - Free Cartoon Pack\Readme.txt" />

@@ -10,7 +10,7 @@ public class MouseLook : MonoBehaviour
     float xRotation = 0f;
     float yRotation = 0f;
 
-    private float Mouse_Senesitivity = 100f;
+    public float Mouse_Senesitivity = 100f;
 
     void Start()
     {
