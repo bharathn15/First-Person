@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Jump : Command
+public class Jump 
 {
     Animator First_Person_Animator;
 
     public void Execute(GameObject obj)
     {
-
         try
         {
             First_Person_Animator = obj.GetComponent<Animator>();
@@ -38,16 +37,14 @@ public class Jump : Command
 }
 
 
-public class Movement : Command
+public class Movement 
 {
+
+    PlayerMovement playerMovement = new PlayerMovement();
     public void Execute(GameObject obj)
     {
         try
         {
-            if (Input.GetKeyDown(KeyCode.W))
-            {
-                Debug.Log("W Key has been pressed.");
-            }
         }
         catch (System.Exception e)
         {

@@ -5,17 +5,17 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // 
-    // Jump jump;
-    // Movement movement;
 
-    Command jump;
-    Command move;
+    // Invoking Enum Game Mode
+    GameMode gameMode;
+
+    Jump jump;
+    Movement move;
 
     public CharacterController controller;
     public float Player_Speed = 12f;
 
-    Vector3 velocity;
+    public Vector3 velocity;
     public float gravity = -9.81f;
 
     public Transform GroundCheck;
@@ -24,22 +24,22 @@ public class PlayerMovement : MonoBehaviour
 
     public float Jump_Height;
 
-    bool isGrounded;
+    public bool isGrounded;
 
     Animator First_Person_Animator;
-    public GameObject Player_Body;
-
+    public GameObject Player_Body;    
 
     private void Awake()
     {
+
+        gameMode = GameMode.StartGame;
+
         jump = new Jump();
-        move = new Movement();
+        move = new Movement();  
     }
 
     private void Start()
     {
-
-
         gravity *= 2;
         Jump_Height = 20f;
 
@@ -48,12 +48,31 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        Check_Game_Mode();       
+    }
+
+    void Check_Game_Mode()
+    {
+        switch (gameMode)
+        {
+
+            case GameMode.StartGame:
+                Start_Game();
+                // Debug.Log("Game Has Started.");
+                break;
+            case GameMode.EndGame:
+                End_Game();
+                break;
+        }
+    }
+
+    void Start_Game()
+    {
 
         Movement();
-
-        
         jump.Execute(Player_Body);
-        move.Execute(Player_Body);
+        if (Input.GetKeyDown(KeyCode.Escape))
+            gameMode = GameMode.EndGame;
     }
 
     void Movement()
@@ -74,5 +93,12 @@ public class PlayerMovement : MonoBehaviour
 
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    void End_Game()
+    {
+        Application.Quit();
+        // UnityEditor.EditorApplication.isPlaying = false;
+        // Debug.Log("Game Has Ended.");
     }
 }
