@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Poly City - Free Cartoon Pack/Demo/Demo.unity
+- path: Assets/Poly City/Demo/Demo.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Poly City/Demo/Demo.unity
+    guid: 06d2d35472034704facb5ba67b5b020a
   m_configObjects: {}

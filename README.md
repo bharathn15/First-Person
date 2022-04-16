@@ -5,7 +5,7 @@ Unity - 2020.3.19f1
 ______________________________________
 Visual Studio - 2019
 ______________________________________
-Scenes - SampleScene 
+Scene - Demo
 ______________________________________
 Scripts - PlayerMovement, MouseLook
 ______________________________________
@@ -13,8 +13,9 @@ Use Mouse to Look around and WASD keys to move around
 ______________________________________
 Prefab - First_Person.prefab
 ______________________________________
-Build File - "/First_Person_Build"
+Build File - "/First_Person_Build_File"
 Platform - PC, Mac & Linux Standalone
+.exe File - First_Person.exe
 ______________________________________
 
 

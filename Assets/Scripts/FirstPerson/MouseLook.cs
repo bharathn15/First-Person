@@ -5,6 +5,8 @@ using UnityEngine;
 public class MouseLook : MonoBehaviour
 {
 
+    StartButton startButton;
+
     public Transform playerBody;
 
     float xRotation = 0f;
@@ -14,10 +16,19 @@ public class MouseLook : MonoBehaviour
 
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+
+        startButton = new StartButton();
+
+        Cursor_Actions();
     }
 
+
+    void Cursor_Actions()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        startButton.setStart_Button_Value(false);
+    }
 
     void Update()
     {

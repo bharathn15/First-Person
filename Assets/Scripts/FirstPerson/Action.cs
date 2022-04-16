@@ -5,6 +5,7 @@ using UnityEngine;
 public class Jump 
 {
     Animator First_Person_Animator;
+    public bool is_Jump = false;
 
     public void Execute(GameObject obj)
     {
@@ -14,13 +15,15 @@ public class Jump
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 Debug.Log("Actions::Jump");
-
+                
                 // Invoking the Jump Animation and setting it to True.
                 First_Person_Animator.SetBool("Jump", true);
 
                 if (First_Person_Animator.GetBool("Jump"))
                 {
                     First_Person_Animator.Play("Jump");
+                    is_Jump = true;
+ 
                 }
             }
             if (Input.GetKeyUp(KeyCode.Space))

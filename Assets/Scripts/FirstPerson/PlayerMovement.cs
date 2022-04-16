@@ -12,6 +12,11 @@ public class PlayerMovement : MonoBehaviour
     Jump jump;
     Movement move;
 
+    Player_Audio player_Audio;
+
+
+
+
     public CharacterController controller;
     public float Player_Speed = 12f;
 
@@ -33,9 +38,11 @@ public class PlayerMovement : MonoBehaviour
     {
 
         gameMode = GameMode.StartGame;
+        
 
         jump = new Jump();
-        move = new Movement();  
+        move = new Movement();
+        player_Audio = new Player_Audio();
     }
 
     private void Start()
@@ -48,6 +55,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        // Check for the Game Mode.
+        // Start Game is default.
         Check_Game_Mode();       
     }
 
@@ -68,10 +77,16 @@ public class PlayerMovement : MonoBehaviour
 
     void Start_Game()
     {
-
+        // Player Move Action
         Movement();
+
+        // Player Jump Action
         jump.Execute(Player_Body);
+        Audio_Manager();
+
+        // Quit the Game
         if (Input.GetKeyDown(KeyCode.Escape))
+            // Change the Game Mode
             gameMode = GameMode.EndGame;
     }
 
@@ -93,6 +108,18 @@ public class PlayerMovement : MonoBehaviour
 
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+    }
+
+
+    // Need to work on this below code.
+    void Audio_Manager()
+    {
+        if(jump.is_Jump == true)
+        {
+            Debug.Log(jump.is_Jump);
+            
+            jump.is_Jump = false;
+        }
     }
 
     void End_Game()
