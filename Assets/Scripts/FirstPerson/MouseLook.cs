@@ -22,12 +22,17 @@ public class MouseLook : MonoBehaviour
         Cursor_Actions();
     }
 
+    public void Cursor_Default_Actions()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
 
     void Cursor_Actions()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        startButton.setStart_Button_Value(false);
+        // startButton.setStart_Button_Value(false);
     }
 
     void Update()

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 // using Actions;
 
 public class PlayerMovement : MonoBehaviour
@@ -8,6 +9,9 @@ public class PlayerMovement : MonoBehaviour
 
     // Invoking Enum Game Mode
     GameMode gameMode;
+
+    // Mouse Look
+    MouseLook mouseLook;
 
     Jump jump;
     Movement move;
@@ -38,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
     {
 
         gameMode = GameMode.StartGame;
-        
+        mouseLook = new MouseLook();
 
         jump = new Jump();
         move = new Movement();
@@ -64,15 +68,24 @@ public class PlayerMovement : MonoBehaviour
     {
         switch (gameMode)
         {
-
+            // Start Game. 
             case GameMode.StartGame:
-                Start_Game();
-                // Debug.Log("Game Has Started.");
+
+                // Coroutine Function to Start the Game after couple of seconds. 
+                StartCoroutine(Start_Game_Coroutine(0.25f));
                 break;
+            
+            // End Game.
             case GameMode.EndGame:
                 End_Game();
                 break;
         }
+    }
+
+    IEnumerator Start_Game_Coroutine(float value)
+    {
+        yield return new WaitForSeconds(value);
+        Start_Game();
     }
 
     void Start_Game()
@@ -82,7 +95,7 @@ public class PlayerMovement : MonoBehaviour
 
         // Player Jump Action
         jump.Execute(Player_Body);
-        Audio_Manager();
+        
 
         // Quit the Game
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -112,20 +125,14 @@ public class PlayerMovement : MonoBehaviour
 
 
     // Need to work on this below code.
-    void Audio_Manager()
-    {
-        if(jump.is_Jump == true)
-        {
-            Debug.Log(jump.is_Jump);
-            
-            jump.is_Jump = false;
-        }
-    }
 
     void End_Game()
     {
+        // Reset the Mouse to the Default Actions.  
+        mouseLook.Cursor_Default_Actions();
+
+        // Loading the UI Scene.
+        SceneManager.LoadScene(0);
         Application.Quit();
-        // UnityEditor.EditorApplication.isPlaying = false;
-        // Debug.Log("Game Has Ended.");
     }
 }

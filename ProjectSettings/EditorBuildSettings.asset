@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Poly City/Demo/Demo.unity
-    guid: 06d2d35472034704facb5ba67b5b020a
+    path: Assets/Scenes/FP_Game/First_Scene.unity
+    guid: 34c07a023d2f6bb4b9b26e73c4b0fa1e
+  - enabled: 1
+    path: Assets/Scenes/FP_Game/Second_Scene.unity
+    guid: 38b101ae4c7fd31489b11e7495891f26
   m_configObjects: {}

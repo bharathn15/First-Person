@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class Jump 
 {
     Animator First_Person_Animator;
@@ -38,7 +40,6 @@ public class Jump
         }
     }
 }
-
 
 public class Movement 
 {
