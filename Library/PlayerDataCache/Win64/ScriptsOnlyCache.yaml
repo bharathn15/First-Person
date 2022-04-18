@@ -556,7 +556,7 @@ ScriptsOnlyBuild:
     className: TextMeshProFloatingText
   - hash:
       serializedVersion: 2
-      Hash: f548a46d91a57ed895ccef5f39c82102
+      Hash: 52ffca68320c2044a2f77b834eca0809
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player_Audio
