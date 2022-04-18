@@ -5,7 +5,7 @@ Unity - 2020.3.19f1
 ______________________________________
 Visual Studio - 2019
 ______________________________________
-Scene - Demo
+Scene - First_Scene, Second_Scene
 ______________________________________
 Scripts - PlayerMovement, MouseLook
 ______________________________________

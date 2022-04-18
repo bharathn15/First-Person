@@ -2,10 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Unity.Jobs;
+
 // using Actions;
 
+[RequireComponent(typeof(CharacterController))]
 public class PlayerMovement : MonoBehaviour
 {
+
+    public static PlayerMovement Instance { set; get; }
 
     // Invoking Enum Game Mode
     GameMode gameMode;
@@ -13,13 +18,14 @@ public class PlayerMovement : MonoBehaviour
     // Mouse Look
     MouseLook mouseLook;
 
+    // Jump Action
     Jump jump;
+
+    // Movement Action
     Movement move;
 
+    // Player Audio Class
     Player_Audio player_Audio;
-
-
-
 
     public CharacterController controller;
     public float Player_Speed = 12f;
@@ -99,7 +105,7 @@ public class PlayerMovement : MonoBehaviour
 
         // Quit the Game
         if (Input.GetKeyDown(KeyCode.Escape))
-            // Change the Game Mode
+            // Change the Game Mode to End.
             gameMode = GameMode.EndGame;
     }
 
@@ -122,9 +128,6 @@ public class PlayerMovement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
     }
-
-
-    // Need to work on this below code.
 
     void End_Game()
     {

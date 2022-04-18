@@ -33,7 +33,7 @@ public class Jump
             First_Person_Animator = obj.GetComponent<Animator>();
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                Debug.Log("Actions::Jump");
+                // Debug.Log("Actions::Jump");
                 
                 // Invoking the Jump Animation and setting it to True.
                 First_Person_Animator.SetBool("Jump", true);
@@ -75,5 +75,7 @@ public class Movement
         }
     }
 }
+
+
 
 

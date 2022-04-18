@@ -6,12 +6,11 @@ using UnityEngine;
 public class Player_Audio : MonoBehaviour
 {
 
-    // public static Player_Audio Instance { set; get; }
+    public static Player_Audio Instance { set; get; }
 
     Jump jump;
 
-    public AudioSource jumpAudio;
-
+    public AudioSource[] Audio;
 
     public Player_Audio()
     {
@@ -21,28 +20,33 @@ public class Player_Audio : MonoBehaviour
     private void Awake()
     {
         jump = new Jump();
+        
     }
 
     void Start()
     {
-        
+
+
     }
 
     
     void Update()
     {
-        if (jump.Get_is_Jump())
-        {
-            Jump_Audio();
-            jump.Set_is_Jump(false); 
-        }    
+        Jump_Audio();
     }
 
     void Jump_Audio()
     {
         try
         {
-            jumpAudio.GetComponent<AudioSource>().Play();
+            if (jump.Get_is_Jump())
+            {
+                // Jump Audio.
+                Audio[0].GetComponent<AudioSource>().Play();
+
+                // Setting the Jump to False.
+                jump.Set_is_Jump(false);
+            }
         }
         catch (Exception e)
         {
