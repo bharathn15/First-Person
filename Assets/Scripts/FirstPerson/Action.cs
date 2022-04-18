@@ -7,7 +7,24 @@ using UnityEngine;
 public class Jump 
 {
     Animator First_Person_Animator;
-    public bool is_Jump = false;
+    Player_Audio player_Audio = new Player_Audio();
+    private static bool is_Jump;
+    
+
+    public Jump()
+    {
+        is_Jump = false;
+    }
+
+    public void Set_is_Jump(bool value)
+    {
+        is_Jump = value;
+    }
+
+    public bool Get_is_Jump()
+    {
+        return is_Jump;
+    }
 
     public void Execute(GameObject obj)
     {
@@ -23,14 +40,15 @@ public class Jump
 
                 if (First_Person_Animator.GetBool("Jump"))
                 {
+                    
                     First_Person_Animator.Play("Jump");
-                    is_Jump = true;
- 
+                    Set_is_Jump(true);
                 }
             }
             if (Input.GetKeyUp(KeyCode.Space))
             {
                 First_Person_Animator.SetBool("Jump", false);
+                Set_is_Jump(false);
             }
         }
         catch (System.Exception e)

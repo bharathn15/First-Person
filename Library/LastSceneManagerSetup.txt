@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Poly City/Demo/Demo.unity
+- path: Assets/Scenes/FP_Game/Second_Scene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

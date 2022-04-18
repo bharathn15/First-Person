@@ -675,7 +675,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 294024491}
-  - component: {fileID: 294024492}
   m_Layer: 0
   m_Name: Scripts
   m_TagString: Untagged
@@ -697,19 +696,6 @@ Transform:
   m_Father: {fileID: 5548505767794918277}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294024492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294024490}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a9016816502e8c478aac89da5d52217, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpAudio: {fileID: 0}
 --- !u!1 &295828085
 GameObject:
   m_ObjectHideFlags: 0
@@ -1043,7 +1029,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 3f98b318aaf33b141bb28477e5adbeb4, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.45
   m_Pitch: 1.6
   Loop: 0
   Mute: 0
@@ -3566,6 +3552,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3098488095777215095, guid: bbd6f479e9b0089428e3facaecc174d8, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3098488096665455037, guid: bbd6f479e9b0089428e3facaecc174d8, type: 3}
       propertyPath: m_Name
       value: First_Person
