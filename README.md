@@ -7,7 +7,7 @@ Visual Studio - 2019
 ______________________________________
 Scene - First_Scene, Second_Scene
 ______________________________________
-Scripts - PlayerMovement, MouseLook
+Scripts - PlayerMovement, MouseLook, Player_Audio
 ______________________________________
 Use Mouse to Look around and WASD keys to move around
 ______________________________________

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Rock
   - Stone
+  - gold
   layers:
   - Default
   - TransparentFX
