@@ -69,7 +69,7 @@ public class Player_Audio : MonoBehaviour
             if (collections.get_Gold_Collected() == true)
             {
                 // Gold Collection Audio.
-                Audio[1].Play();
+                // Audio[1].Play();
                 collections.set_Gold_Collected(false);
             }
         }

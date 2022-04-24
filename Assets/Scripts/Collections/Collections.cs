@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Collections : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class Collections : MonoBehaviour
 
     [SerializeField] private GameObject Gold_Value;
     private TextMesh Gold_Value_Text;
+
+    [SerializeField] private GameObject Golds;
+    private int Gold_Count;
 
     public Collections()
     {
@@ -39,7 +43,9 @@ public class Collections : MonoBehaviour
     
     void Start()
     {
-        // Gold_Value_Text = Gold_Value.GetComponent<TextMesh>().text;
+        
+        Gold_Count = Golds.transform.childCount;
+        Debug.Log(Gold_Count);
     }
 
     void Update()
@@ -51,11 +57,9 @@ public class Collections : MonoBehaviour
     {
         if (other.gameObject.tag.Equals("gold"))
         {
-
             other.gameObject.SetActive(false);
             Collect_Item();
-            set_Gold_Collected(true);
-            
+            set_Gold_Collected(true);   
         }
     }
 
