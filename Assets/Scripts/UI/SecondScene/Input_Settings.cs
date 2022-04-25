@@ -43,26 +43,27 @@ public class Input_Settings : MonoBehaviour
 
     void Settings()
     {
-        if(Input.GetKey(KeyCode.LeftShift))
+
+        // Left Mouse Click to show up cursor
+        if (Input.GetMouseButtonDown(0)) //  && Get_is_Settings_Opened() == false
         {
-            if (Input.GetKey(KeyCode.B))
-            {
-                Debug.Log("Settings menu Opend.");
+            Debug.Log("Settings menu Opened.");
 
-                // Reset the Mouse to default actions
-                mouseLook.Cursor_Default_Actions();
-
-                Set_is_Settings_Opened(true);
-                
-            }
+            // Reset the Mouse to default actions
+            mouseLook.Cursor_Default_Actions();
+           // Set_is_Settings_Opened(true);
         }
 
-        if (Input.GetMouseButtonDown(1))
+        // Right Mouse Click to hide the cursor.
+        if (Input.GetMouseButtonDown(1)) // && Get_is_Settings_Opened() == true
         {
             Debug.Log("Settings menu Closed.");
 
             // Hide the Cursor Arrow.
             mouseLook.Cursor_Actions();
+            Set_is_Settings_Opened(false);
         }
+
+
     }
 }
