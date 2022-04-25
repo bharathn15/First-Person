@@ -27,6 +27,9 @@ public class PlayerMovement : MonoBehaviour
     // Player Audio Class
     Player_Audio player_Audio;
 
+    // Settings Class
+    Input_Settings input_Settings;
+
     public CharacterController controller;
     public float Player_Speed = 12f;
 
@@ -53,6 +56,8 @@ public class PlayerMovement : MonoBehaviour
         jump = new Jump();
         move = new Movement();
         player_Audio = new Player_Audio();
+
+        input_Settings = new Input_Settings();
     }
 
     private void Start()
@@ -101,10 +106,15 @@ public class PlayerMovement : MonoBehaviour
 
         // Player Jump Action
         jump.Execute(Player_Body);
-        
+
 
         // Quit the Game
+        // Press Escape Key down and Check for Opened Settings Tab.
+        
         if (Input.GetKeyDown(KeyCode.Escape))
+
+            // Debug.Log(input_Settings.Get_is_Settings_Opened());
+            
             // Change the Game Mode to End.
             gameMode = GameMode.EndGame;
     }

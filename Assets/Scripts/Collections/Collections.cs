@@ -45,7 +45,7 @@ public class Collections : MonoBehaviour
     {
         
         Gold_Count = Golds.transform.childCount;
-        Debug.Log(Gold_Count);
+        // Debug.Log(Gold_Count);
     }
 
     void Update()

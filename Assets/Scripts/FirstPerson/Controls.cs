@@ -6,5 +6,7 @@ using UnityEngine.Jobs;
 public enum GameMode
 {
     StartGame,
+    PauseGame,
     EndGame
+
 }
