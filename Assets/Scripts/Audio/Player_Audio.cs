@@ -35,9 +35,6 @@ public class Player_Audio : MonoBehaviour
     {
         // Jumping Audio
         Jump_Audio();
-
-        // Gold Collecting Audio
-        Gold_Collection_Audio();
     }
 
     void Jump_Audio()
@@ -57,27 +54,6 @@ public class Player_Audio : MonoBehaviour
         {
             Debug.LogError("Jump Audio is not Playing.");
             throw new NotImplementedException();
-        }
-        
+        }   
     }
-
-    void Gold_Collection_Audio()
-    {
-        try
-        {
-            if (collections.get_Gold_Collected() == true)
-            {
-                // Gold Collection Audio.
-                // Audio[1].Play();
-                collections.set_Gold_Collected(false);
-            }
-        }
-        catch (Exception e)
-        {
-            Debug.LogError("Gold Collection Audio is not Playing.");
-            throw new NotImplementedException();
-        }
-    }
-
-
 }
