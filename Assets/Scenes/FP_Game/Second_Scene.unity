@@ -4042,7 +4042,9 @@ Animation:
   m_Enabled: 1
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: e8f2a4235262022429354eceb74b7e7e, type: 2}
-  m_Animations: []
+  m_Animations:
+  - {fileID: 7400000, guid: e8f2a4235262022429354eceb74b7e7e, type: 2}
+  - {fileID: 7400000, guid: df7fefe99ca2fc645af2b67377eb6508, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0

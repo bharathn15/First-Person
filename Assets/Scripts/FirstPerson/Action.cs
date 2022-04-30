@@ -79,6 +79,44 @@ public class Movement
     }
 }
 
+public class First_Person_Camera
+{
+    bool is_FirstPerson_Enabled;
+
+    public First_Person_Camera()
+    {
+        is_FirstPerson_Enabled = false;
+    }
+
+    public void Set_FirstPerson_Camera(bool value)
+    {
+        is_FirstPerson_Enabled = value;
+    }
+
+    public bool Get_FirstPerson_Camera()
+    {
+        return is_FirstPerson_Enabled;
+    }
+    public void Execute(GameObject obj)
+    {
+        try
+        {
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                Set_FirstPerson_Camera(true);
+                if(Get_FirstPerson_Camera() == true)
+                {
+                    obj.GetComponent<Animation>().Play("FirstPerson_Camera");
+                }
+            }
+        }
+        catch (System.Exception e)
+        {
+            Debug.Log("Main Camera Game Object is not found in the Hierarchy.");
+        }   
+    }
+}
+
 public class Third_Person_Camera
 {
     // Animator is not using 
@@ -105,13 +143,13 @@ public class Third_Person_Camera
     {
         try
         {
-            ThirdPersonCamera = obj.GetComponent<Animator>();
+            // ThirdPersonCamera = obj.GetComponent<Animator>();
             if (Input.GetKeyDown(KeyCode.Alpha3))
             {
                 Set_ThirdPerson_Camera(true);
                 if(Get_ThirdPerson_Camera() == true)
                 {
-                    ThirdPersonCamera.GetComponent<Animation>().Play();
+                    obj.GetComponent<Animation>().Play("ThirdPerson_Camera");
                 }
             }
         }
@@ -119,7 +157,6 @@ public class Third_Person_Camera
         {
             Debug.Log("Main Camera Game Object is not found in the Hierarchy.");
         }
-
     }
 }
 

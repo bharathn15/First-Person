@@ -24,6 +24,9 @@ public class PlayerMovement : MonoBehaviour
     // Movement Action
     Movement move;
 
+    // First Person Camera
+    First_Person_Camera first_Person_Camera;
+
     // Third Person Camera
     Third_Person_Camera third_Person_Camera;
 
@@ -58,6 +61,7 @@ public class PlayerMovement : MonoBehaviour
 
         jump = new Jump();
         move = new Movement();
+        first_Person_Camera = new First_Person_Camera();
         third_Person_Camera = new Third_Person_Camera();
         player_Audio = new Player_Audio();
 
@@ -112,7 +116,11 @@ public class PlayerMovement : MonoBehaviour
         jump.Execute(Player_Body);
 
 
-        // Enabling and Disabling the Third Person Camera.
+        // Enabling the First Person Camera on Press of Numeric Button 1.
+        // Passing the Main Camera Game Object as Parameter.
+        first_Person_Camera.Execute(Player_Body.transform.GetChild(0).gameObject);
+
+        // Enabling the Third Person Camera on Press of Numeric Button 3.
         // Passing the Main Camera Game Object as Parameter.
         third_Person_Camera.Execute(Player_Body.transform.GetChild(0).gameObject);
 
@@ -121,8 +129,6 @@ public class PlayerMovement : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Escape))
 
-            // Debug.Log(input_Settings.Get_is_Settings_Opened());
-            
             // Change the Game Mode to End.
             gameMode = GameMode.EndGame;
     }
