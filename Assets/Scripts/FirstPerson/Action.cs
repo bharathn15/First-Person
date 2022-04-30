@@ -9,7 +9,7 @@ public class Jump
     Animator First_Person_Animator;
     Player_Audio player_Audio = new Player_Audio();
     private static bool is_Jump;
-    
+
 
     public Jump()
     {
@@ -42,6 +42,9 @@ public class Jump
                 {
                     
                     First_Person_Animator.Play("Jump");
+                    
+                    // If Jump is true 
+                    // Jump Audio will be Played
                     Set_is_Jump(true);
                 }
             }
@@ -76,6 +79,49 @@ public class Movement
     }
 }
 
+public class Third_Person_Camera
+{
+    // Animator is not using 
+    Animator ThirdPersonCamera;
+    bool is_ThirdPerson_Enabled;
+
+    public Third_Person_Camera()
+    {
+        is_ThirdPerson_Enabled = false;
+    }
+
+    public void Set_ThirdPerson_Camera(bool value)
+    {
+        is_ThirdPerson_Enabled = value;
+    }
+
+    public bool Get_ThirdPerson_Camera()
+    {
+        return is_ThirdPerson_Enabled;
+    }
+
+
+    public void Execute(GameObject obj)
+    {
+        try
+        {
+            ThirdPersonCamera = obj.GetComponent<Animator>();
+            if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                Set_ThirdPerson_Camera(true);
+                if(Get_ThirdPerson_Camera() == true)
+                {
+                    ThirdPersonCamera.GetComponent<Animation>().Play();
+                }
+            }
+        }
+        catch(System.Exception e)
+        {
+            Debug.Log("Main Camera Game Object is not found in the Hierarchy.");
+        }
+
+    }
+}
 
 
 

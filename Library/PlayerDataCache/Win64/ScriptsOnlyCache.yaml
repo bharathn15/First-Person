@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - Collections
+    - GoldCollection_Audio
     - Input_Settings
     - MouseLook
     - PlayerMovement
@@ -68,31 +69,31 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1516}
+      Script: {instanceID: 1520}
     - Class: 114
-      Script: {instanceID: 1772}
+      Script: {instanceID: 1776}
     - Class: 114
-      Script: {instanceID: 2028}
+      Script: {instanceID: 2032}
     - Class: 114
-      Script: {instanceID: 2320}
+      Script: {instanceID: 2324}
     - Class: 114
-      Script: {instanceID: 2426}
+      Script: {instanceID: 2430}
     - Class: 114
-      Script: {instanceID: 2466}
+      Script: {instanceID: 2470}
     - Class: 114
-      Script: {instanceID: 2576}
+      Script: {instanceID: 2580}
     - Class: 114
-      Script: {instanceID: 2760}
+      Script: {instanceID: 2766}
     - Class: 114
-      Script: {instanceID: 2842}
+      Script: {instanceID: 2848}
     - Class: 114
-      Script: {instanceID: 3640}
+      Script: {instanceID: 3646}
     - Class: 114
-      Script: {instanceID: 3746}
+      Script: {instanceID: 3752}
     - Class: 114
-      Script: {instanceID: 3970}
+      Script: {instanceID: 3976}
     - Class: 114
-      Script: {instanceID: 4000}
+      Script: {instanceID: 4006}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -157,37 +158,39 @@ ScriptsOnlyBuild:
     - Class: 111
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1516}
+      Script: {instanceID: 1520}
     - Class: 114
-      Script: {instanceID: 1772}
+      Script: {instanceID: 1776}
     - Class: 114
-      Script: {instanceID: 2310}
+      Script: {instanceID: 2314}
     - Class: 114
-      Script: {instanceID: 2320}
+      Script: {instanceID: 2324}
     - Class: 114
-      Script: {instanceID: 2426}
+      Script: {instanceID: 2430}
     - Class: 114
-      Script: {instanceID: 2466}
+      Script: {instanceID: 2470}
     - Class: 114
-      Script: {instanceID: 2576}
+      Script: {instanceID: 2580}
     - Class: 114
-      Script: {instanceID: 2760}
+      Script: {instanceID: 2652}
     - Class: 114
-      Script: {instanceID: 2842}
+      Script: {instanceID: 2766}
     - Class: 114
-      Script: {instanceID: 2918}
+      Script: {instanceID: 2848}
     - Class: 114
-      Script: {instanceID: 3178}
+      Script: {instanceID: 2924}
     - Class: 114
-      Script: {instanceID: 3300}
+      Script: {instanceID: 3184}
     - Class: 114
-      Script: {instanceID: 3350}
+      Script: {instanceID: 3306}
     - Class: 114
-      Script: {instanceID: 3954}
+      Script: {instanceID: 3356}
     - Class: 114
-      Script: {instanceID: 3970}
+      Script: {instanceID: 3960}
     - Class: 114
-      Script: {instanceID: 4350}
+      Script: {instanceID: 3976}
+    - Class: 114
+      Script: {instanceID: 4356}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -445,6 +448,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: 720d0f4d4dd9f8db68088c9dbb345a98
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GoldCollection_Audio
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f

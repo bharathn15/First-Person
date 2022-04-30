@@ -27,7 +27,7 @@ public class GoldCollection_Audio : MonoBehaviour
         {
             if (collections.get_Gold_Collected() == true)
             {
-                Debug.Log(collections.get_Gold_Collected());
+                // Debug.Log(collections.get_Gold_Collected());
                 // Gold Collection Audio.
                 GoldAudio.Play();                
                 collections.set_Gold_Collected(false);

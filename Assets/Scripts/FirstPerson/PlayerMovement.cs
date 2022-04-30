@@ -24,6 +24,9 @@ public class PlayerMovement : MonoBehaviour
     // Movement Action
     Movement move;
 
+    // Third Person Camera
+    Third_Person_Camera third_Person_Camera;
+
     // Player Audio Class
     Player_Audio player_Audio;
 
@@ -55,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
 
         jump = new Jump();
         move = new Movement();
+        third_Person_Camera = new Third_Person_Camera();
         player_Audio = new Player_Audio();
 
         input_Settings = new Input_Settings();
@@ -107,6 +111,10 @@ public class PlayerMovement : MonoBehaviour
         // Player Jump Action
         jump.Execute(Player_Body);
 
+
+        // Enabling and Disabling the Third Person Camera.
+        // Passing the Main Camera Game Object as Parameter.
+        third_Person_Camera.Execute(Player_Body.transform.GetChild(0).gameObject);
 
         // Quit the Game
         // Press Escape Key down and Check for Opened Settings Tab.

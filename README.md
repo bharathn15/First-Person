@@ -14,7 +14,7 @@ ______________________________________
 Prefab - First_Person.prefab
 ______________________________________
 Build File - "/First_Person_Build_File"
-Platform - PC, Mac & Linux Standalone
+| Platform - PC
 .exe File - First_Person.exe
 ______________________________________
 
