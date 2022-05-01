@@ -94,7 +94,7 @@ public class PlayerMovement : MonoBehaviour
                 StartCoroutine(Start_Game_Coroutine(0.25f));
                 break;
             
-            // End Game.
+            // Load Game to the First Scene.
             case GameMode.EndGame:
                 End_Game();
                 break;
@@ -160,6 +160,6 @@ public class PlayerMovement : MonoBehaviour
 
         // Loading the UI Scene.
         SceneManager.LoadScene(0);
-        Application.Quit();
+        // Application.Quit();
     }
 }
