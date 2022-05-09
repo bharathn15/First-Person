@@ -51,7 +51,9 @@ public class PlayerMovement : MonoBehaviour
     public bool isGrounded;
 
     Animator First_Person_Animator;
-    public GameObject Player_Body;    
+    public GameObject Player_Body;
+
+    public GameObject GoldCollectionInstruction;
 
     private void Awake()
     {
@@ -126,11 +128,20 @@ public class PlayerMovement : MonoBehaviour
 
         // Quit the Game
         // Press Escape Key down and Check for Opened Settings Tab.
-        
+
+        // Showing the Instruction to collect the Gold.
+        StartCoroutine(GoldCollection_Instruction());
+
         if (Input.GetKeyDown(KeyCode.Escape))
 
             // Change the Game Mode to End.
             gameMode = GameMode.EndGame;
+    }
+
+    IEnumerator GoldCollection_Instruction()
+    {
+        yield return new WaitForSeconds(5f);
+        GoldCollectionInstruction.SetActive(false);
     }
 
     void Movement()
