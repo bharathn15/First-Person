@@ -24,7 +24,7 @@ public class Scifi_Player : MonoBehaviour
         Debug.Log("On Enable Method is working");
 
         // Position of the Player will be above the SciFi Environment
-        // Player.transform.Translate(new Vector3(Player_Position.transform.position.x, Player_Position.transform.position.y, Player_Position.transform.position.z));
-        Player.transform.SetPositionAndRotation(new Vector3(Player_Position.transform.position.x, Player_Position.transform.position.y, Player_Position.transform.position.z), Quaternion.identity);
+        Player.transform.Translate(new Vector3(Player_Position.transform.position.x, Player_Position.transform.position.y, Player_Position.transform.position.z));
+        //Player.transform.SetPositionAndRotation(new Vector3(Player_Position.transform.position.x, Player_Position.transform.position.y, Player_Position.transform.position.z), Quaternion.identity);
     }
 }
