@@ -8,6 +8,7 @@ ScriptsOnlyBuild:
     - MouseLook
     - PlayerMovement
     - Player_Audio
+    - Scifi_Player
     - Screen_Pointer
     - StartButton
     Unity.Rider.Editor.dll:
@@ -74,29 +75,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1776}
     - Class: 114
-      Script: {instanceID: 2032}
+      Script: {instanceID: 2034}
     - Class: 114
-      Script: {instanceID: 2324}
+      Script: {instanceID: 2108}
     - Class: 114
-      Script: {instanceID: 2430}
+      Script: {instanceID: 2328}
     - Class: 114
-      Script: {instanceID: 2470}
+      Script: {instanceID: 2434}
     - Class: 114
-      Script: {instanceID: 2580}
+      Script: {instanceID: 2474}
     - Class: 114
-      Script: {instanceID: 2766}
+      Script: {instanceID: 2584}
     - Class: 114
-      Script: {instanceID: 2848}
+      Script: {instanceID: 2770}
     - Class: 114
-      Script: {instanceID: 3646}
+      Script: {instanceID: 2852}
     - Class: 114
-      Script: {instanceID: 3752}
+      Script: {instanceID: 3650}
     - Class: 114
-      Script: {instanceID: 3976}
+      Script: {instanceID: 3756}
     - Class: 114
-      Script: {instanceID: 4006}
+      Script: {instanceID: 3980}
     - Class: 114
-      Script: {instanceID: 27250}
+      Script: {instanceID: 4010}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -165,35 +166,37 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1776}
     - Class: 114
-      Script: {instanceID: 2314}
+      Script: {instanceID: 2002}
     - Class: 114
-      Script: {instanceID: 2324}
+      Script: {instanceID: 2318}
     - Class: 114
-      Script: {instanceID: 2430}
+      Script: {instanceID: 2328}
     - Class: 114
-      Script: {instanceID: 2470}
+      Script: {instanceID: 2434}
     - Class: 114
-      Script: {instanceID: 2580}
+      Script: {instanceID: 2474}
     - Class: 114
-      Script: {instanceID: 2652}
+      Script: {instanceID: 2584}
     - Class: 114
-      Script: {instanceID: 2766}
+      Script: {instanceID: 2656}
     - Class: 114
-      Script: {instanceID: 2848}
+      Script: {instanceID: 2770}
     - Class: 114
-      Script: {instanceID: 2924}
+      Script: {instanceID: 2852}
     - Class: 114
-      Script: {instanceID: 3184}
+      Script: {instanceID: 2928}
     - Class: 114
-      Script: {instanceID: 3306}
+      Script: {instanceID: 3188}
     - Class: 114
-      Script: {instanceID: 3356}
+      Script: {instanceID: 3310}
     - Class: 114
-      Script: {instanceID: 3960}
+      Script: {instanceID: 3360}
     - Class: 114
-      Script: {instanceID: 3976}
+      Script: {instanceID: 3964}
     - Class: 114
-      Script: {instanceID: 4356}
+      Script: {instanceID: 3980}
+    - Class: 114
+      Script: {instanceID: 4360}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -327,6 +330,12 @@ ScriptsOnlyBuild:
     className: GroupTrack
   - hash:
       serializedVersion: 2
+      Hash: f28afe1937cfe0d4a2b1463007e228fa
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Scifi_Player
+  - hash:
+      serializedVersion: 2
       Hash: 800c50acba124432abb4cf0d47202e06
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -343,6 +352,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner
     className: PlaymodeTestsController
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EndButton
   - hash:
       serializedVersion: 2
       Hash: c1d728126ff1918728036c59106d32b2
@@ -453,7 +468,7 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
-      Hash: 720d0f4d4dd9f8db68088c9dbb345a98
+      Hash: bc1d49468de586cea26af55128c7a8bb
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GoldCollection_Audio
@@ -681,7 +696,7 @@ ScriptsOnlyBuild:
     className: EventTrigger
   - hash:
       serializedVersion: 2
-      Hash: 380b93d57a6953c0cbf89aa8d909866f
+      Hash: a922432cd096bff318f42512f4819b05
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerMovement
@@ -937,12 +952,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Gold
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: EndButton
   platform: 19
   scenePathNames:
   - Assets/Scenes/FP_Game/First_Scene.unity

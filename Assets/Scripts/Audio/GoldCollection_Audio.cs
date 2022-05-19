@@ -9,6 +9,8 @@ public class GoldCollection_Audio : MonoBehaviour
     [SerializeField] private AudioSource GoldAudio;
     [SerializeField] private GameObject Scripts;
 
+    [SerializeField] private GameObject Door_Obj;
+
     Collections collections = new Collections();
 
     private int Gold_Count;
@@ -56,10 +58,11 @@ public class GoldCollection_Audio : MonoBehaviour
 
     void Gold_Collected()
     {
-        if (Gold_Count.Equals(5) && is_Gold_Collected )
+        if (Gold_Count.Equals(6) && is_Gold_Collected )
         {
             Debug.Log(Gold_Count);
-            Scripts.GetComponent<Scifi_Player>().enabled = true;
+            // Scripts.GetComponent<Scifi_Player>().enabled = true;
+            Door_Obj.GetComponent<BoxCollider>().enabled = true;
             is_Gold_Collected = false;
         }
     }
