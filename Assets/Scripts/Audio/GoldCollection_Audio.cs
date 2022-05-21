@@ -29,6 +29,11 @@ public class GoldCollection_Audio : MonoBehaviour
         Gold_Collection_Audio();
 
         Gold_Collected();
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Debug.Log("Q button is working.");
+        }
     }
 
     void Gold_Collection_Audio()
@@ -61,9 +66,15 @@ public class GoldCollection_Audio : MonoBehaviour
         if (Gold_Count.Equals(6) && is_Gold_Collected )
         {
             Debug.Log(Gold_Count);
-            // Scripts.GetComponent<Scifi_Player>().enabled = true;
-            Door_Obj.GetComponent<BoxCollider>().enabled = true;
+            StartCoroutine(Scifi_Enabling());
             is_Gold_Collected = false;
         }
+    }
+
+    IEnumerator Scifi_Enabling()
+    {
+        
+        yield return new WaitForSeconds(2f);
+        Scripts.GetComponent<Scifi_Player>().enabled = true;
     }
 }

@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - Collections
+    - Door
     - EndButton
     - GoldCollection_Audio
     - Input_Settings
@@ -79,25 +80,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2108}
     - Class: 114
-      Script: {instanceID: 2328}
+      Script: {instanceID: 2330}
     - Class: 114
-      Script: {instanceID: 2434}
+      Script: {instanceID: 2436}
     - Class: 114
-      Script: {instanceID: 2474}
+      Script: {instanceID: 2476}
     - Class: 114
-      Script: {instanceID: 2584}
+      Script: {instanceID: 2586}
     - Class: 114
-      Script: {instanceID: 2770}
+      Script: {instanceID: 2772}
     - Class: 114
-      Script: {instanceID: 2852}
+      Script: {instanceID: 2854}
     - Class: 114
-      Script: {instanceID: 3650}
+      Script: {instanceID: 3652}
     - Class: 114
-      Script: {instanceID: 3756}
+      Script: {instanceID: 3758}
     - Class: 114
-      Script: {instanceID: 3980}
+      Script: {instanceID: 3982}
     - Class: 114
-      Script: {instanceID: 4010}
+      Script: {instanceID: 4012}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -168,35 +169,37 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2002}
     - Class: 114
-      Script: {instanceID: 2318}
+      Script: {instanceID: 2156}
     - Class: 114
-      Script: {instanceID: 2328}
+      Script: {instanceID: 2320}
     - Class: 114
-      Script: {instanceID: 2434}
+      Script: {instanceID: 2330}
     - Class: 114
-      Script: {instanceID: 2474}
+      Script: {instanceID: 2436}
     - Class: 114
-      Script: {instanceID: 2584}
+      Script: {instanceID: 2476}
     - Class: 114
-      Script: {instanceID: 2656}
+      Script: {instanceID: 2586}
     - Class: 114
-      Script: {instanceID: 2770}
+      Script: {instanceID: 2658}
     - Class: 114
-      Script: {instanceID: 2852}
+      Script: {instanceID: 2772}
     - Class: 114
-      Script: {instanceID: 2928}
+      Script: {instanceID: 2854}
     - Class: 114
-      Script: {instanceID: 3188}
+      Script: {instanceID: 2930}
     - Class: 114
-      Script: {instanceID: 3310}
+      Script: {instanceID: 3190}
     - Class: 114
-      Script: {instanceID: 3360}
+      Script: {instanceID: 3312}
     - Class: 114
-      Script: {instanceID: 3964}
+      Script: {instanceID: 3362}
     - Class: 114
-      Script: {instanceID: 3980}
+      Script: {instanceID: 3966}
     - Class: 114
-      Script: {instanceID: 4360}
+      Script: {instanceID: 3982}
+    - Class: 114
+      Script: {instanceID: 4362}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -360,6 +363,12 @@ ScriptsOnlyBuild:
     className: EndButton
   - hash:
       serializedVersion: 2
+      Hash: f28afe1937cfe0d4a2b1463007e228fa
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Door
+  - hash:
+      serializedVersion: 2
       Hash: c1d728126ff1918728036c59106d32b2
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -468,7 +477,7 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
-      Hash: bc1d49468de586cea26af55128c7a8bb
+      Hash: d2ef8eb26dd877b38d13493cd7f8a945
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GoldCollection_Audio
